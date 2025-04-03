@@ -1,1 +1,39 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="add-todo">
+            <input type="text" id="todoInput" placeholder="Enter todo">
+            <input type="date" id="dateInput">
+            <input type="time" id="timeInput">
+            <button onclick="add()">Add</button>
+        </div>
+        <div class="filter-section">
+            <select id="filter" onchange="show()">
+                <option value="all">All Tasks</option>
+                <option value="active">Active</option>
+                <option value="done">Completed</option>
+            </select>
+        </div>
+        <table id="todoTable">
+            <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Task</th>
+                    <th>Date & Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="todoList"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
